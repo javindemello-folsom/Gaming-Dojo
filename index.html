@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Dojo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav"> 
+        <div class="flex-container">
+            <div class="nav-title">
+                <h1>Gaming</h1>
+                <h1 id="purple-text">Dojo</h1>
+            </div>
+            <div class="nav-links">
+                <select>
+                    <option>Euro €</option>
+                    <option>USD $</option>
+                    <option>Peso ₱</option>
+                </select>
+                <div class="cart">
+                    <input type="image" src="images/cart-light.png" alt="cart" onclick="alert('Accessing to your cart...')">
+                    <h3 id="cart-count">0</h3>
+                </div>
+                <input type="image" src="images/search-light.png" alt="search" onclick="window.prompt('Search Games')">
+            </div>
+        </div>
+    </div>
+    <div class="main-page">
+        <div class="highlights">
+            <p><strong>Highlights</strong></p>
+            <div class="banner">
+                <input onclick="previousImage()" type="image" src="images/chevron-left.png" alt="arrow left">
+                <img id="banner-image" src="images/stonepunk.png" alt="banner image">
+                <input onclick="nextImage()" type="image" src="images/chevron-right.png" alt="arrow-right">
+            </div>
+            <div class="banner-tabs">
+                <div id="tab1" onclick="changeImage(1)"></div>
+                <div id="tab2" onclick="changeImage(2)"></div>
+                <div id="tab3" onclick="changeImage(3)"></div>
+                <div id="tab4" onclick="changeImage(4)" onmouseover=""></div>
+            </div>
+        </div>
+        <div class="game-purchase">
+            <div class="game">
+                <img src="images/cafe-neko.png" alt="cafe neko">
+                <p><strong>Cafe Neko: Gold Edition</strong></p>
+                <div class="systemsupport">
+                    <input type="image" src="images/windows.png" alt="windows" onclick="gameSupport('Windows')">
+                    <input type="image" src="images/apple.png" alt="apple" onclick="gameSupport('Mac')">
+                </div>
+                <div class="purchase">
+                    <p class="sale">-20%</p>
+                    <div class="markdown">
+                        <p class="old-price">€14.98</p>
+                        <p class="new-price"><strong>€10.39</strong></p>
+                    </div>
+                    <button onclick="buyGame('Cafe Neko')" type="button">Buy</button>
+                </div>
+            </div>
+            <div class="game">
+                <img src="images/pixel-ninjas-2.png" alt="pixel ninjas 2">
+                <p><strong>Pixel Ninjas 2</strong></p>
+                <div class="systemsupport">
+                    <input type="image" src="images/windows.png" alt="windows" onclick="gameSupport('Windows')">
+                    <input type="image" src="images/apple.png" alt="apple" onclick="gameSupport('Mac')">
+                </div>
+                <div class="purchase">
+                    <p class="sale">-10%</p>
+                    <div class="markdown">
+                        <p class="old-price">€8.19</p>
+                        <p class="new-price"><strong>€7.39</strong></p>
+                    </div>
+                    <button onclick="buyGame('Pixel Ninja 2')" type="button">Buy</button>
+                </div>
+            </div>
+            <div class="game">
+                <img src="images/stonepunk.png" alt="cafe neko">
+                <p id="game-title"><strong>Stonepunk 10000 BCE</strong></p>
+                <div class="systemsupport">
+                    <input type="image" src="images/windows.png" alt="windows" onclick="gameSupport('Windows')">
+                    <input type="image" src="images/apple.png" alt="apple" onclick="gameSupport('Mac')">
+                    <input type="image" src="images/linux.png" alt="linux" onclick="gameSupport('Linux')">
+                </div>
+                <div class="purchase">
+                    <p class="sale">NEW</p>
+                    <div class="markdown">
+                        <p class="old-price"></p>
+                        <p class="new-price"><strong>€19.99</strong></p>
+                    </div>
+                    <button onclick="buyGame('Stonepunk')" type="button">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
